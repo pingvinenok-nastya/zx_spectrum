@@ -102,9 +102,9 @@ void Window::handle_event(const SDL_Event &event)
 			cpu.load_state_sna("save.sna");
 		// DEBUG
 		if (event.key.keysym.scancode == SDL_SCANCODE_F10)
-			cpu.load_state_sna_libspectrum("jetpac.sna");
+			//cpu.load_state_sna_libspectrum("jetpac.sna");
 		if (event.key.keysym.scancode == SDL_SCANCODE_F11)
-			cpu.load_state_z80_libspectrum("simcity.z80");
+			//cpu.load_state_z80_libspectrum("simcity.z80");
 
 		{
 			auto k = s_keymap.find(event.key.keysym.scancode);
@@ -130,7 +130,7 @@ void Window::handle_keys(const Uint8 *keys)
 
 void Window::do_logic()
 {
-	cpu.intr();
+	cpu.intr(0);
 //	cpu.ticks(71590);
 	cpu.ticks(25000);
 }

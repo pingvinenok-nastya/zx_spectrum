@@ -19,9 +19,9 @@
 class Window
 {
 public:
-	static constexpr int DEFAULT_WIDTH = 1600;
-	static constexpr int DEFAULT_HEIGHT = 1200;
-	static constexpr int PIXEL_SCALE = 5;
+	static constexpr int DEFAULT_WIDTH = 800;
+	static constexpr int DEFAULT_HEIGHT = 600;
+	static constexpr int PIXEL_SCALE = 2;
 protected:
 	int _width, _height;
 	std::shared_ptr<SDL_Window> _window;
